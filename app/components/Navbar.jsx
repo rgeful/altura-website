@@ -40,8 +40,8 @@ export default function Navbar() {
               : ""
           }`}
         >
-          <div className="relative flex items-center justify-between py-3 lg:py-4">
-            {/* Left: Logo */}
+          <div className="relative flex h-16 items-center justify-between">
+
             <Link href="/" aria-label="home" className="flex items-center">
               <Image
                 src="/logo.png"
@@ -53,8 +53,7 @@ export default function Navbar() {
               />
             </Link>
 
-            {/* Center: Desktop links */}
-            <div className="absolute inset-0 m-auto hidden w-fit lg:block">
+            <div className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 lg:block">
               <ul className="flex gap-8 text-sm">
                 {navItems.map((it) => (
                   <li key={it.href}>
@@ -66,14 +65,12 @@ export default function Navbar() {
               </ul>
             </div>
 
-            {/* Right: Mobile menu button */}
             <button
               onClick={() => setOpen((v) => !v)}
               aria-label={open ? "Close Menu" : "Open Menu"}
               aria-expanded={open}
               className="lg:hidden -m-2.5 p-2.5 text-gray-300 hover:text-white"
             >
-              {/* Hamburger / Close (inline SVGs to avoid extra deps) */}
               {!open ? (
                 <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path strokeLinecap="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -86,7 +83,6 @@ export default function Navbar() {
             </button>
           </div>
 
-          {/* Mobile dropdown */}
           {open && (
             <div className="lg:hidden border-t border-white/10">
               <ul className="space-y-2 px-4 py-3">
