@@ -20,9 +20,9 @@ export default function HeroSection() {
         <div className="mt-10">
           <Link
             href="/contact"
-            className="rounded-xl bg-white px-5 py-3 text-base font-medium text-black transition hover:bg-white/90"
+            className="rounded-xl bg-white px-5 py-3 text-base font-medium text-black transition hover:bg-white/70"
           >
-            Start Building
+            Let's Elevate
           </Link>
         </div>
       </div>

@@ -12,7 +12,6 @@
   --font-sans: "Alumni Sans", Arial, Helvetica, sans-serif;
 }
 
-/* keep the same values in dark too (or delete this block entirely) */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #000000;

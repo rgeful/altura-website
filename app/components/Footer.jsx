@@ -15,7 +15,7 @@ export default function Footer() {
               <span className="sr-only">Altura Software Solutions</span>
             </Link>
             <p className="text-sm text-gray-400">
-              Modern websites & automation tools that elevate small businesses.
+              Modern websites & automation tools that help scale small businesses.
             </p>
           </div>
 
