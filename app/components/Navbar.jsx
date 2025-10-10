@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { motion, AnimatePresence } from "motion/react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -11,7 +12,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
+    const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -23,8 +24,10 @@ export default function Navbar() {
   ];
 
   const linkCls = (href) =>
-    `px-2 py-1 rounded-md transition ${
-      pathname === href ? "text-white" : "text-gray-300 hover:text-white"
+    `px-4 py-2 rounded-full transition-all duration-100 relative ${
+      pathname === href 
+        ? "text-white bg-white/10" 
+        : "text-gray-300 hover:text-white hover:bg-white/5"
     }`;
 
   return (
@@ -34,10 +37,15 @@ export default function Navbar() {
         className="fixed z-50 w-full px-2"
       >
         <div
-          className={`mx-auto mt-2 max-w-7xl px-4 lg:px-8 transition-all duration-300 ${
+          style={{
+            backgroundColor: scrolled ? 'rgba(0, 0, 0, 0.5)' : 'transparent',
+            backdropFilter: scrolled ? 'blur(12px)' : 'blur(0px)',
+            WebkitBackdropFilter: scrolled ? 'blur(12px)' : 'blur(0px)',
+          }}
+          className={`mx-auto mt-2 max-w-7xl px-4 lg:px-8 transition-all duration-500 ease-out ${
             scrolled
-              ? "bg-background/50 rounded-2xl border border-white/10 backdrop-blur"
-              : ""
+              ? "rounded-2xl border border-white/10"
+              : "border border-transparent"
           }`}
         >
           <div className="relative flex h-16 items-center justify-between">
@@ -65,41 +73,58 @@ export default function Navbar() {
               </ul>
             </div>
 
-            <button
+            <motion.button
               onClick={() => setOpen((v) => !v)}
               aria-label={open ? "Close Menu" : "Open Menu"}
               aria-expanded={open}
               className="lg:hidden -m-2.5 p-2.5 text-gray-300 hover:text-white"
+              whileTap={{ scale: 0.9 }}
             >
-              {!open ? (
-                <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              ) : (
-                <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              )}
-            </button>
+              <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <motion.path
+                  strokeLinecap="round"
+                  animate={open ? { d: "M6 18L18 6" } : { d: "M4 6h16" }}
+                  transition={{ duration: 0.3 }}
+                />
+                <motion.path
+                  strokeLinecap="round"
+                  animate={open ? { opacity: 0 } : { d: "M4 12h16", opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+                <motion.path
+                  strokeLinecap="round"
+                  animate={open ? { d: "M6 6l12 12" } : { d: "M4 18h16" }}
+                  transition={{ duration: 0.3 }}
+                />
+              </svg>
+            </motion.button>
           </div>
 
-          {open && (
-            <div className="lg:hidden border-t border-white/10">
-              <ul className="space-y-2 px-4 py-3">
-                {navItems.map((it) => (
-                  <li key={it.href}>
-                    <Link
-                      href={it.href}
-                      className={`block ${linkCls(it.href)}`}
-                      onClick={() => setOpen(false)}
-                    >
-                      {it.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+          <AnimatePresence>
+            {open && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="lg:hidden border-t border-white/10 overflow-hidden"
+              >
+                <ul className="space-y-2 px-4 py-3">
+                  {navItems.map((it) => (
+                    <li key={it.href}>
+                      <Link
+                        href={it.href}
+                        className={`block ${linkCls(it.href)}`}
+                        onClick={() => setOpen(false)}
+                      >
+                        {it.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </nav>
     </header>
