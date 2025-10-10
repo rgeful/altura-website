@@ -17,6 +17,9 @@ export default function Services() {
 
         <div className="grid gap-10 md:grid-cols-3">
         <div className="rounded-2xl border border-white/10 bg-black/40 p-8 backdrop-blur-md hover:shadow-[0_0_25px_rgba(147,51,234,0.25)] transition-all duration-300">
+          <div className="mb-6 flex justify-center">
+            <Image src="/web-dev.png" alt="Web Design" width={200} height={200} className="object-contain" />
+          </div>
           <h2 className="text-2xl md:text-3xl font-heading mb-4 text-white">
             Web Design
           </h2>
@@ -28,6 +31,9 @@ export default function Services() {
         </div>
 
         <div className="rounded-2xl border border-white/10 bg-black/40 p-8 backdrop-blur-md hover:shadow-[0_0_25px_rgba(147,51,234,0.25)] transition-all duration-300">
+          <div className="mb-6 flex justify-center">
+            <Image src="/automation-tools.png" alt="Automation Tools" width={200} height={200} className="object-contain" />
+          </div>
           <h2 className="text-2xl md:text-3xl font-heading mb-4 text-white">
             Automation Tools
           </h2>
@@ -39,6 +45,9 @@ export default function Services() {
         </div>
 
         <div className="rounded-2xl border border-white/10 bg-black/40 p-8 backdrop-blur-md hover:shadow-[0_0_25px_rgba(147,51,234,0.25)] transition-all duration-300">
+          <div className="mb-6 flex justify-center">
+            <Image src="/ai-agent.png" alt="AI Business Assistant" width={125} height={125} className="object-contain" />
+          </div>
           <h2 className="text-2xl md:text-3xl font-heading mb-4 text-white">
             AI Business Assistant
           </h2>
