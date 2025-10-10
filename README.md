@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Altura Software Solutions
 
-## Getting Started
+Altura Software Solutions is a modern web development and automation agency site built with Next.js and Tailwind CSS.  
+It showcases Altura’s services, including web design, automation tools, and AI business assistants — with a sleek, dark, minimal aesthetic and a fully functional contact system.
 
-First, run the development server:
+# About the Website
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This website was designed to:
+- Present Altura’s services and pricing clearly.
+- Allow small business owners to reach out directly through a contact form.
+- Demonstrate clean, responsive UI and smooth user experience.
+- Reflect the modern, tech-driven personality of Altura Software Solutions.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Fast & Responsive — Built with Next.js App Router and Tailwind CSS.  
+- Modern Design — Minimal, dark theme with smooth animations.  
+- Simple Contact Form — Sends messages directly to Gmail using secure App Passwords.  
+- Mobile Friendly — Looks great on any screen size.  
+- Hosted on Vercel — Secure, reliable, and connected to `alturasoftwaresolutions.com`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Tech Stack
 
-## Learn More
+- Next.js 14 (React Framework)
+- Tailwind CSS v4
+- Node.js + Nodemailer (Contact form)
+- Vercel (Hosting + Deployment) 
 
-To learn more about Next.js, take a look at the following resources:
+# Contact
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Interested in working together?  
+Visit (https://alturasoftwaresolutions.com/contact)  
+or reach out directly via email: **alturasoftware@gmail.com**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+© 2025 Altura Software Solutions — Built by **Saul Plascencia**
