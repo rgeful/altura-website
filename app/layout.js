@@ -1,3 +1,12 @@
+export const metadata = {
+  title: "Altura Software Solutions",
+  description: "Modern websites & automation tools that elevate small businesses.",
+  icons: {
+    icon: "/favicon.png",
+  },
+};
+
+
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
