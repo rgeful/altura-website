@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -45,6 +45,10 @@ const servicesData = [
 
 export default function Services() {
   const [expandedId, setExpandedId] = useState(null);
+
+  useEffect(() => {
+    document.title = "Services | Altura";
+  }, []);
 
   const toggleExpand = (id) => {
     setExpandedId(expandedId === id ? null : id);

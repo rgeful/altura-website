@@ -32,7 +32,7 @@ export async function POST(req) {
 
     const mailOptions = {
       from: `Altura Website <${process.env.SMTP_USER}>`,
-      to: process.env.TO_EMAIL || process.env.SMTP_USER,
+      to: process.env.CONTACT_TO || process.env.SMTP_USER,
       subject: `New Inquiry from ${name}${business ? ` (${business})` : ""}`,
       replyTo: email || undefined,
       text: `

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function Contact() {
@@ -13,6 +13,10 @@ export default function Contact() {
     details: "",
   });
   const [status, setStatus] = useState("");
+
+  useEffect(() => {
+    document.title = "Contact | Altura";
+  }, []);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
