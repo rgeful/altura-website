@@ -8,7 +8,7 @@ const servicesData = [
   {
     id: "web-design",
     title: "Web Design",
-    image: "/web-dev.png",
+    image: "/web-dev.svg",
     imageSize: { width: 200, height: 200 },
     shortDesc: "Sleek, responsive websites built with modern frameworks like Next.js and Tailwind. Designed to impress and convert visitors.",
     detailedDesc: "We create stunning, high-performance websites tailored to your brand and business goals. Our designs are mobile-first, SEO-optimized, and built using cutting-edge technologies like Next.js, React, and Tailwind CSS. Every site includes responsive design, accessibility features, performance optimization, and seamless integrations with your existing tools. Whether you need a simple landing page or a more complex website, we got you covered.",
@@ -17,7 +17,7 @@ const servicesData = [
   {
     id: "automation",
     title: "Automation Tools",
-    image: "/automation-tools.png",
+    image: "/automation-tools.svg",
     imageSize: { width: 200, height: 200 },
     shortDesc: "Save time and streamline your business with AI-powered automations, integrations, and smart workflows custom-built for your needs.",
     detailedDesc: (
@@ -35,7 +35,7 @@ const servicesData = [
   {
     id: "ai-assistant",
     title: "AI Business Assistant",
-    image: "/ai-agent.png",
+    image: "/ai-agent.svg",
     imageSize: { width: 125, height: 125 },
     shortDesc: "Custom-built chatbots and intelligent agents that can handle customer support, scheduling, and lead generation — available 24/7.",
     detailedDesc: "Deploy your own AI-powered business assistant that handles customer inquiries, books appointments, qualifies leads, and provides instant support around the clock. Our AI agents are trained on your specific business data and can integrate with your CRM, calendar, and communication platforms. They understand context, maintain conversation history, and escalate complex issues to your team when needed. Perfect for reducing response times, capturing more leads, and providing consistent customer experiences at scale.",
