@@ -60,12 +60,7 @@ export default function Contact() {
 
   return (
     <section className="relative flex items-center justify-center min-h-screen px-6 py-24 text-center overflow-hidden">
-      
-      <div className="absolute inset-0 -z-10">
-              <Image src="/hero-bg.jpg" alt="" fill sizes="100vw" className="object-cover" priority />
-              <div className="absolute inset-0 bg-black/50" />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-transparent to-black/90" />
-            </div>
+      <div className="absolute inset-0 -z-10 bg-black" />
 
       <div className="relative w-full max-w-3xl">
         <h1 className="text-5xl md:text-6xl font-heading mb-12 text-white tracking-tight text-center">

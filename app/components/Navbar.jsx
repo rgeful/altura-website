@@ -19,16 +19,16 @@ export default function Navbar() {
 
   const navItems = [
     { href: "/", label: "Home" },
-    { href: "/services", label: "Services" },
+    { href: "/#services", label: "Services", isAnchor: true },
     { href: "/contact", label: "Contact" },
   ];
 
-  const linkCls = (href) =>
-    `px-4 py-2 rounded-full transition-all duration-100 relative ${
-      pathname === href 
-        ? "text-white bg-white/10" 
-        : "text-gray-300 hover:text-white hover:bg-white/5"
+  const linkCls = (item) => {
+    const isActive = !item.isAnchor && pathname === item.href;
+    return `px-4 py-2 rounded-full transition-all duration-100 relative ${
+      isActive ? "text-white bg-white/10" : "text-gray-300 hover:text-white hover:bg-white/5"
     }`;
+  };
 
   return (
     <header>
@@ -65,7 +65,7 @@ export default function Navbar() {
               <ul className="flex gap-8 text-sm">
                 {navItems.map((it) => (
                   <li key={it.href}>
-                    <Link href={it.href} className={linkCls(it.href)}>
+                    <Link href={it.href} className={linkCls(it)}>
                       {it.label}
                     </Link>
                   </li>
@@ -114,7 +114,7 @@ export default function Navbar() {
                     <li key={it.href}>
                       <Link
                         href={it.href}
-                        className={`block ${linkCls(it.href)}`}
+                        className={`block ${linkCls(it)}`}
                         onClick={() => setOpen(false)}
                       >
                         {it.label}
