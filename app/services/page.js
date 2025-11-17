@@ -12,7 +12,7 @@ const servicesData = [
     imageSize: { width: 200, height: 200 },
     shortDesc: "Sleek, responsive websites built with modern frameworks like Next.js and Tailwind. Designed to impress and convert visitors.",
     detailedDesc: "We create stunning, high-performance websites tailored to your brand and business goals. Our designs are mobile-first, SEO-optimized, and built using cutting-edge technologies like Next.js, React, and Tailwind CSS. Every site includes responsive design, accessibility features, performance optimization, and seamless integrations with your existing tools. Whether you need a simple landing page or a more complex website, we got you covered.",
-    price: "Starting at $499"
+    price: "Starting at $399"
   },
   {
     id: "automation",
