@@ -23,7 +23,7 @@ export default function Footer() {
             <h3 className="text-sm font-semibold">Navigate</h3>
             <ul className="space-y-2 text-sm">
               <li><Link href="/" className="text-gray-300 hover:text-white">Home</Link></li>
-              <li><Link href="/services" className="text-gray-300 hover:text-white">Services</Link></li>
+              <li><Link href="/#services" className="text-gray-300 hover:text-white">Services</Link></li>
               <li><Link href="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
             </ul>
           </nav>
